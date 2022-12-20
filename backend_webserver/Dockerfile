@@ -1,0 +1,1 @@
+FROM macbre/nginx-http3:latest
