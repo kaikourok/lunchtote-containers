@@ -22,6 +22,7 @@ docker_compose_exec backend git init
 docker_compose_exec backend git remote add origin git@github.com:kaikourok/lunchtote-backend.git
 docker_compose_exec backend git fetch origin ${BACKEND_INIT_BRANCH}
 docker_compose_exec backend git checkout ${BACKEND_INIT_BRANCH}
+docker_compose_exec backend make dev-deps
 docker_compose_exec backend make init
 
 docker-compose exec frontend bash -c "chmod -R 600 /root/.ssh"
